@@ -1,0 +1,22 @@
+context:
+  host: shop-xo.hctestedu.com
+  port: '80'
+steps:
+- assert_options:
+  - errorMsg: code不等于0
+    target: $.code
+    type: equals
+    value: '0'
+  - errorMsg: token不存在
+    target: $.data.token
+    type: exists
+    value: ''
+  data:
+    accounts: sanfeng
+    pwd: sanfeng
+    type: username
+  extract_options:
+  - target: $.data.token
+    varname: token
+  method: post
+  url: http://!host:!port/index.php?s=/api/user/login&application=app

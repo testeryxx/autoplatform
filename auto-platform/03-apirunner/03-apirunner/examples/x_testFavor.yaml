@@ -1,0 +1,19 @@
+context:
+  host: shop-xo.hctestedu.com
+  port: '80'
+steps:
+- !include D:\work\course\test\platform\V3.0\03-apirunner\examples\common-login.yaml
+- assert_options:
+  - errorMsg: code不等于0
+    target: $.code
+    type: equals
+    value: '0'
+  params:
+    s: "/api/usergoodsfavor/index"
+    application: app
+    application_client_type: weixin
+    token: "!login_token"
+  data:
+    page: 1
+  method: post
+  url: "http://!host:!port/index.php"

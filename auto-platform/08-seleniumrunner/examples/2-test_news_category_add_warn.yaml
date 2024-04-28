@@ -1,0 +1,52 @@
+context:
+  catname: 三丰老师11
+  sort: '1'
+  login_cookie: 56cfa52b-ebd7-4b84-a0a1-cd7fd97a796e
+steps:
+- command: open
+  desc: 打开读书屋登录页面【未登录状态】
+  target: http://novel-admin.hctestedu.com/login
+- command: add_cookie
+  desc: 添加免登录cookie
+  target: JSESSIONID
+  value: "!login_cookie"
+- command: open
+  desc: 再次进入读书屋后台首页【已登录状态】
+  target: http://novel-admin.hctestedu.com/index
+- command: wait_for_element_visible
+  desc: 等待菜单加载出来
+  target: //span[text()="新闻管理"]
+  value: '5'
+- command: click
+  desc: 点击一级菜单
+  target: //span[text()="新闻管理"]
+- command: wait_for_element_visible
+  desc: 等待二级菜单加载出来
+  target: //a[text()="新闻类别"]
+  value: '5'
+- command: click
+  desc: 点击二级菜单
+  target: //a[text()="新闻类别"]
+- command: select_frame
+  desc: 切换 iframe
+  target: //iframe[2]
+- command: wait_for_element_visible
+  desc: 等待表单加载出来
+  target: //div[text()="序号"]
+  value: '5'
+- command: click
+  desc: 点击新增按钮
+  target: //button[@onclick="add()"]
+- command: select_frame
+  desc: 切换到新增页面
+  target: //iframe[1]
+- command: send_keys
+  desc: 输入分类排序
+  target: //input[@id="sort"]
+  value: '!sort'
+- command: click
+  desc: 点击提交
+  target: //button[text()="提交"]
+- command: assert_visibility_of
+  desc: 判断 是否出现提示信息(判断页面是否存在某个元素)
+  target: //label[@id="name-error"]

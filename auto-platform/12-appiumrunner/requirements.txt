@@ -1,0 +1,9 @@
+pytest
+pytest-html
+selenium
+pytest-dependency
+pytest-ordering
+jsonpath
+PyYAML
+pyyaml-include
+Appium-Python-Client==1.3.0

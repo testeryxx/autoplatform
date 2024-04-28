@@ -1,0 +1,30 @@
+﻿# 所需要的依赖
+# web框架
+django==3.2.4
+django-bootstrap4==3.0.1
+django-simpleui==2021.6.2
+django-nested_admin==3.3.3
+# 数据库操作
+pymysql==1.0.2
+sqlalchemy==1.4.18
+# yaml文件操作
+PyYaml
+
+# 接口测试
+requests==2.25.1
+
+# 定时任务
+# celery==5.0.5
+# django-celery-beat==2.2.0
+# django-celery-results==2.1.0
+# redis==3.5.3
+# windows 下运行需要这个
+# eventlet==0.31.0
+
+
+# robotframework==4.0.3
+# robotframework-requests==0.9.1
+# WEB UI自动化
+# selenium==3.141.0
+# 移动端自动化测试 Appium
+# Appium-Python-Client==1.2.0

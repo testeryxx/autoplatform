@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-xfq$d1gcu9_8h&8%l()o^9+1gul5ap$o%87(_ldqeeoayt#=qt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -127,9 +127,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 HERE = os.path.dirname(os.path.abspath(__file__))
 HERE = os.path.join(HERE, '../')
+# STATICFILES_DIRS = (
+#     os.path.join(HERE, 'static/'),
+#     "/tmp/auto_test_platform/"
+# )
+
 STATICFILES_DIRS = (
     os.path.join(HERE, 'static/'),
-    "/tmp/auto_test_platform/"
+    "/file/auto_test_platform/"
 )
 SIMPLEUI_LOGO = '/static/img/logo.png'
 SIMPLEUI_HOME_INFO = False

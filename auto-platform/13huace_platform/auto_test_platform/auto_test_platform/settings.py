@@ -16,8 +16,6 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -25,10 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-xfq$d1gcu9_8h&8%l()o^9+1gul5ap$o%87(_ldqeeoayt#=qt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -78,7 +75,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'auto_test_platform.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -87,13 +83,12 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'auto_test_platform',
         'USER': 'root',
-        'PASSWORD': 'admin',
-        'HOST': '192.168.1.152',
+        'PASSWORD': 'Aadmin1@',
+        'HOST': '192.168.1.31',
         'PORT': '3306',
     }
 }
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -113,7 +108,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -127,7 +121,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
@@ -138,8 +131,8 @@ STATICFILES_DIRS = (
     os.path.join(HERE, 'static/'),
     "/tmp/auto_test_platform/"
 )
-SIMPLEUI_LOGO='/static/img/logo.png'
-SIMPLEUI_HOME_INFO=False
+SIMPLEUI_LOGO = '/static/img/logo.png'
+SIMPLEUI_HOME_INFO = False
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

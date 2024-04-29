@@ -1,0 +1,3 @@
+[console_scripts]
+apirun = apirunner.cli.cli:main
+

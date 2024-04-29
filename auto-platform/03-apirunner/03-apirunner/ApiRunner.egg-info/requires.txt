@@ -1,0 +1,6 @@
+pytest
+pytest-html
+jsonpath
+PyYAML
+pyyaml-include
+requests

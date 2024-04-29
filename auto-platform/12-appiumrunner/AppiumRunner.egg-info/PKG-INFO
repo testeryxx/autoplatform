@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: AppiumRunner
+Version: 0.0.1
+Summary: APP UI 自动化测试工具
+Home-page: http://www.hctestedu.com
+Author: hctestedu.com
+Author-email: zhangfeng0103@live.com
+License: GPLv3
+Project-URL: Bug Tracker, https://github.com/crazyFeng/api-runner/issues
+Project-URL: Contact Us, http://www.hctestedu.com
+Description: python setup.py install
+        
+        运行 apprun --cases=xxxx
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
